@@ -1,6 +1,10 @@
 import React from 'react'
+import { Category } from '../types/graphql_queries'
 
-const Categories = () => {
+interface CategoriesProps {
+  categories: Array<Category>
+}
+const Categories = ({}: CategoriesProps) => {
   return (
     <div>Categories</div>
   )
