@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { PostCard, Categories, PostWidget, Header } from '../components'
 import { getPosts } from '../services/graphcmsclient'
-import { Category, Post } from '../types/graphql_queries'
+import { Category, Postcard } from '../types/graphql_queries'
 
 interface HomeProps {
-  posts: Array<Post>,
+  posts: Array<Postcard>,
   categories: Array<Category>
 }
 
@@ -12,7 +12,7 @@ export default function Home({posts, categories}: HomeProps) {
   return (
     <div className="container mx-auto px-10 mb-8 ">
       <Head>
-        <title>CMS Blog</title>
+        <title>Study Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -38,8 +38,6 @@ export default function Home({posts, categories}: HomeProps) {
 
 export async function getStaticProps() {
 
-  
-// TODO : FAZER A REQUEST DE CATEGORIES, PASSAR COMO +1 PROPS
 const categories: Array<Category> = [] 
 
 
