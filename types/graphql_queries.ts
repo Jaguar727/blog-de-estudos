@@ -1,4 +1,4 @@
-export interface Post {
+export interface Postcard {
   node: {
     author: Author,
     createdAt: Date,
@@ -10,6 +10,18 @@ export interface Post {
     },
     categories: Array<Category>
   }
+}
+
+export interface Post {
+    author: Author,
+    createdAt: Date,
+    slug: string,
+    title: string,
+    excerpt: string,
+    featuredImage: {
+        url: string
+    },
+    categories: Array<Category>
 }
 
 export interface Author {
